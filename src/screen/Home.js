@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import Wishlist from '../bottom/Wishlist';
 import Profile from '../bottom/Profile';
 import Map from '../bottom/Map';
@@ -22,21 +22,46 @@ const Home = () => {
         <Profile />
       )}
       <View style={styles.bottomTabs}>
-        <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text style={{color: '#fff'}}>Home</Text>
+        <TouchableOpacity
+          style={styles.bottomTabButtons}
+          onPress={() => setSelectedTab(0)}>
+          <Image
+            style={styles.bottomTabIcon}
+            source={require('../images/house.png')}
+          />
           {/* will use icons */}
         </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>Map</Text>
+        <TouchableOpacity
+          style={styles.bottomTabButtons}
+          onPress={() => setSelectedTab(1)}>
+          <Image
+            style={styles.bottomTabIcon}
+            source={require('../images/compass.png')}
+          />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>WishList</Text>
+        <TouchableOpacity
+          style={styles.bottomTabButtons}
+          onPress={() => setSelectedTab(2)}>
+          <Image
+            style={styles.bottomTabIcon}
+            source={require('../images/heart.png')}
+          />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>Reviews</Text>
+        <TouchableOpacity
+          style={styles.bottomTabButtons}
+          onPress={() => setSelectedTab(3)}>
+          <Image
+            style={styles.bottomTabIcon}
+            source={require('../images/feedback.png')}
+          />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>Profile</Text>
+        <TouchableOpacity
+          style={styles.bottomTabButtons}
+          onPress={() => setSelectedTab(4)}>
+          <Image
+            style={styles.bottomTabIcon}
+            source={require('../images/user.png')}
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -53,16 +78,21 @@ const styles = StyleSheet.create({
     bottom: 0,
     width: '100%',
     justifyContent: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0,0,0,0.5)',
     zIndex: 1000,
-    height: 54,
+    height: 50,
     flexDirection: 'row',
-    elevation: 5,
+    elevation: 100,
+    borderRadius: 3,
   },
   bottomTabButtons: {
     width: '20%',
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  bottomTabIcon: {
+    width: 25,
+    height: 25,
   },
 });

@@ -75,7 +75,8 @@ const Main = () => {
           <Text style={{color: 'white', fontSize: 30, fontWeight: '400'}}>
             Most Popular
           </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('Lists')}>
+          {/* onPress={() => navigation.navigate('Lists')} */}
+          <TouchableOpacity >
             <Text style={{color: '#007AFF', fontSize: 20, fontWeight: '400'}}>
               See all
             </Text>
@@ -89,7 +90,7 @@ const Main = () => {
       <FlatList
         vertical
         showsVerticalScrollIndicator={false}
-        data={transportList}
+        data={recreationalList}
         renderItem={({item, index}) => {
           return <Planbox item={item} />;
         }}
@@ -102,6 +103,7 @@ export default Main;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginBottom: 50,
   },
   categoryList: {
     height: 40,

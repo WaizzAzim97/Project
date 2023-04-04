@@ -23,7 +23,8 @@ const Home = () => {
       )}
       <View style={styles.bottomTabs}>
         <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>Home</Text>
+          <Text style={{color: '#fff'}}>Home</Text>
+          {/* will use icons */}
         </TouchableOpacity>
         <TouchableOpacity style={styles.bottomTabButtons}>
           <Text>Map</Text>
@@ -52,9 +53,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     width: '100%',
     justifyContent: 'center',
-    backgroundColor: 'green',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     zIndex: 1000,
-    height: 70,
+    height: 54,
     flexDirection: 'row',
     elevation: 5,
   },

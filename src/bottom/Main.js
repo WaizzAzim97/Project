@@ -8,11 +8,11 @@ import Planbox from '../common/Planbox';
 
 const Main = () => {
   const [categoryList, setCategoryList] = useState([]);
-  const [tShirtList, setTShirtList] = useState([]);
-  const [shoeList, setShoeList] = useState([]);
-  const [trouserList, setTrouserList] = useState([]);
-  const [slipperList, setSlipperList] = useState([]);
-  const [jeansList, setJeansList] = useState([]);
+  const [transportList, setTransportList] = useState([]);
+  const [historicalList, setHistoricalList] = useState([]);
+  const [recreationalList, setRecreationalList] = useState([]);
+  const [shoppingList, setShoppingList] = useState([]);
+  const [tourPackageList, setTourPackageList] = useState([]);
   const [jacketList, setJacketList] = useState([]);
 
   useEffect(() => {
@@ -20,12 +20,12 @@ const Main = () => {
     planData.category.map(item => {
       categories.push(item.category);
     });
-    setTShirtList(planData.category[0].data);
-    setJeansList(planData.category[1].data);
-    setShoeList(planData.category[2].data);
-    setJacketList(planData.category[3].data);
-    setSlipperList(planData.category[4].data);
-    setTrouserList(planData.category[5].data);
+    setTransportList(planData.category[0].data);
+    setHistoricalList(planData.category[1].data);
+    setHistoricalList(planData.category[2].data);
+    setRecreationalList(planData.category[3].data);
+    setShoppingList(planData.category[4].data);
+    setTourPackageList(planData.category[5].data);
     setCategoryList(categories);
   }, []);
 
@@ -89,7 +89,7 @@ const Main = () => {
       <FlatList
         vertical
         showsVerticalScrollIndicator={false}
-        data={tShirtList}
+        data={transportList}
         renderItem={({item, index}) => {
           return <Planbox item={item} />;
         }}

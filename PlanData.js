@@ -5,8 +5,8 @@ export const planData = {
       data: [
         {
           name: 'Dart',
-          price: 300,
-          gender: 'male',
+          price: 'charge',
+          location: 'male',
           // image: require('./images/tshirt1.jpg'),
         },
       ],
@@ -16,8 +16,8 @@ export const planData = {
       data: [
         {
           name: 'Royal Regalia Museum',
-          price: 500,
-          gender: 'male',
+          price: 'free',
+          location: 'male',
           // image: require('./images/jeans1.webp'),
         },
       ],
@@ -27,8 +27,8 @@ export const planData = {
       data: [
         {
           name: 'Shoes Bukit Shahbandar',
-          price: 1100,
-          gender: 'male',
+          price: 'free',
+          location: 'male',
           // image: require('./images/shoes1.jpeg'),
         },
       ],
@@ -38,30 +38,30 @@ export const planData = {
       data: [
         {
           name: 'Huahao Department Store',
-          price: 1300,
-          gender: 'male',
+          price: '',
+          location: 'male',
           // image: require('./images/jacket1.webp'),
         },
       ],
     },
     {
-      category: 'Slipper',
+      category: 'Tour Packages',
       data: [
         {
-          name: 'Slippers 1',
+          name: 'Out Bound Brunei Darussalam',
           price: 250,
-          gender: 'male',
+          location: 'male',
           // image: require('./images/slipper1.webp'),
         },
       ],
     },
     {
-      category: 'Trousers',
+      category: 'Extra',
       data: [
         {
-          name: 'Trousers 1',
-          price: 250,
-          gender: 'male',
+          name: 'N/A',
+          price: 'N/A',
+          location: '-s',
           // image: require('./images/trouser1.jpg'),
         },
       ],

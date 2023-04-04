@@ -6,19 +6,23 @@ const Planbox = ({item}) => {
     <TouchableOpacity style={styles.container}>
       <View style={{width: '100%'}}>
         <Image source={item.image} style={styles.image} />
-        <Text style={styles.productName}>{item.name}</Text>
+        <Text style={styles.planName}>{item.name}</Text>
         <View style={styles.buttonContainer}>
-          <Text style={styles.productPrice}>$ {item.price}</Text>
-          <TouchableOpacity style={styles.addToCartButton}>
-            <Text style={{color: '#000'}}>Add to Cart</Text>
+          <Text style={styles.planPrice}>$ {item.price}</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Login');
+            }}
+            style={styles.addToCartButton}>
+            <Text style={{color: '#000'}}>View</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.heartButtonContainer}>
-          {/* <Image
+        {/* <TouchableOpacity style={styles.heartButtonContainer}>
+          <Image
             style={styles.heartIcon}
             source={require('../images/like.png')}
-          /> */}
-        </TouchableOpacity>
+          />
+        </TouchableOpacity> */}
       </View>
     </TouchableOpacity>
   );
@@ -35,7 +39,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginBottom: 10,
   },
-  productName: {
+  planName: {
     marginTop: 10,
     marginLeft: 10,
     fontSize: 18,
@@ -46,7 +50,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     marginBottom: 10,
   },
-  tPrice: {
+  planPrice: {
     marginTop: 5,
     marginLeft: 10,
     fontSize: 18,

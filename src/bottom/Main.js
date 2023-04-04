@@ -56,8 +56,35 @@ const Main = () => {
           }}
         />
       </View>
-      <Carousel />
 
+      {/* Carousel Section */}
+      <View style={{
+        flex: 1, 
+        padding: 20,
+        marginTop: 10, 
+        backgroundColor: '#d4d4d8'}}>
+        <View
+          style={{
+            flex: 1,
+            paddingBottom: 10,
+            backgroundColor: '#d4d4d8',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}>
+          <Text style={{color: 'white', fontSize: 30, fontWeight: '400'}}>
+            Most Popular
+          </Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Lists')}>
+            <Text style={{color: '#007AFF', fontSize: 20, fontWeight: '400'}}>
+              See all
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <Carousel />
+      </View>
+
+      {/* Plan List Section    */}
       <Text style={styles.heading}>Plan Your Holiday</Text>
       <FlatList
         vertical

@@ -15,27 +15,27 @@ const Home = () => {
       ) : selectedTab == 1 ? (
         <Map />
       ) : selectedTab == 2 ? (
-        <Reviews />
-      ) : selectedTab == 3 ? (
         <Wishlist />
+      ) : selectedTab == 3 ? (
+        <Reviews />
       ) : (
         <Profile />
       )}
       <View style={styles.bottomTabs}>
         <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>Hello</Text>
+          <Text>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>Hello</Text>
+          <Text>Map</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>Hello</Text>
+          <Text>WishList</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>Hello</Text>
+          <Text>Reviews</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.bottomTabButtons}>
-          <Text>Hello</Text>
+          <Text>Profile</Text>
         </TouchableOpacity>
       </View>
     </View>

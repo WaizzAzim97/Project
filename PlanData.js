@@ -43,28 +43,6 @@ export const planData = {
           // image: require('./images/jacket1.webp'),
         },
       ],
-    },
-    {
-      category: 'Tour Packages',
-      data: [
-        {
-          name: 'Out Bound Brunei Darussalam',
-          price: 250,
-          location: 'male',
-          // image: require('./images/slipper1.webp'),
-        },
-      ],
-    },
-    {
-      category: 'Extra',
-      data: [
-        {
-          name: 'N/A',
-          price: 'N/A',
-          location: '-s',
-          // image: require('./images/trouser1.jpg'),
-        },
-      ],
-    },
+    }
   ],
 };

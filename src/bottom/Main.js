@@ -12,8 +12,6 @@ const Main = () => {
   const [historicalList, setHistoricalList] = useState([]);
   const [recreationalList, setRecreationalList] = useState([]);
   const [shoppingList, setShoppingList] = useState([]);
-  const [tourPackageList, setTourPackageList] = useState([]);
-  const [jacketList, setJacketList] = useState([]);
 
   useEffect(() => {
     let categories = [];
@@ -22,10 +20,8 @@ const Main = () => {
     });
     setTransportList(planData.category[0].data);
     setHistoricalList(planData.category[1].data);
-    setHistoricalList(planData.category[2].data);
-    setRecreationalList(planData.category[3].data);
-    setShoppingList(planData.category[4].data);
-    setTourPackageList(planData.category[5].data);
+    setRecreationalList(planData.category[2].data);
+    setShoppingList(planData.category[3].data);
     setCategoryList(categories);
   }, []);
 
@@ -42,7 +38,7 @@ const Main = () => {
         Welcome User
       </Text>
 
-      <View style={{marginTop: 20}}>
+      {/* <View style={{marginTop: 20}}>
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -55,6 +51,16 @@ const Main = () => {
             );
           }}
         />
+      </View> */}
+
+      <View style={styles.categoryContainer}>
+        {categoryList.map((item, index) => {
+          return (
+            <TouchableOpacity key={index} style={styles.categoryBox}>
+              <Text style={styles.categoryText}>{item}</Text>
+            </TouchableOpacity>
+          );
+        })}
       </View>
 
       {/* Carousel Section */}
@@ -117,8 +123,7 @@ const styles = StyleSheet.create({
   },
   categoryText: {
     color: '#000',
-    marginLeft: 10,
-    marginRight: 10,
+    fontSize: 12,
   },
   heading: {
     marginTop: 20,
@@ -126,6 +131,26 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontWeight: '600',
     color: '#000',
+    marginBottom: 10,
+  },
+  categoryContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  categoryBox: {
+    width: 150,
+    height: 70,
+    borderRadius: 10,
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 10,
+    marginRight: 10,
     marginBottom: 10,
   },
 });

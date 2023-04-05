@@ -10,13 +10,7 @@ const Home = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   return (
     <View style={styles.container}>
-      {selectedTab == 0 ? (
-        <Main />
-      ) : selectedTab == 1 ? (
-        <Map />
-      ) : (
-        <Profile />
-      )}
+      {selectedTab == 0 ? <Main /> : selectedTab == 1 ? <Map /> : <Profile />}
       <View style={styles.bottomTabs}>
         <TouchableOpacity
           style={styles.bottomTabButtons}

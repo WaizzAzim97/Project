@@ -1,16 +1,11 @@
 import React from 'react';
-import { View, ScrollView, Text, StyleSheet } from 'react-native';
+import {View, ScrollView, Text, StyleSheet, Image} from 'react-native';
+import {featured} from '../../FeaturedData';
 
-const items = [
-  { id: 1, name: 'Tour Package 1', agency: 'By Travel Agency', description: 'Description of Item 1' },
-  { id: 2, name: 'Tour Package 2',  agency: 'By Travel Agency', description: 'Description of Item 2' },
-  { id: 3, name: 'Tour Package 3',  agency: 'By Travel Agency', description: 'Description of Item 3' },
-];
-
-const CarouselItem = ({ item }) => {
+const CarouselItem = ({item}) => {
   return (
     <View style={styles.itemContainer}>
-      {/* <Image source={item.image} style={styles.itemImage} /> */}
+      <Image source={item.image} style={styles.itemImage} />
       <Text style={styles.itemName}>{item.name}</Text>
       <Text style={styles.itemAgency}>{item.agency}</Text>
       <Text style={styles.itemDescription}>{item.description}</Text>
@@ -21,7 +16,9 @@ const CarouselItem = ({ item }) => {
 const Carousel = () => {
   return (
     <ScrollView horizontal={true} style={styles.carouselContainer}>
-      {items.map(item => <CarouselItem item={item} key={item.id} />)}
+      {featured.featured.map(item => (
+        <CarouselItem item={item} key={item.id} />
+      ))}
     </ScrollView>
   );
 };
@@ -32,7 +29,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   itemContainer: {
-    height: 400,
+    height: 350,
     backgroundColor: 'white',
     borderRadius: 20,
     marginHorizontal: 10,
@@ -41,10 +38,10 @@ const styles = StyleSheet.create({
   },
   itemImage: {
     width: 300,
-    height: 300,
+    height: 250,
     marginBottom: 10,
     bottom: 20,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   itemName: {
     fontWeight: 'bold',

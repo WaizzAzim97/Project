@@ -58,11 +58,13 @@ const Main = () => {
       </View>
 
       {/* Carousel Section */}
-      <View style={{
-        flex: 1, 
-        padding: 20,
-        marginTop: 10, 
-        backgroundColor: '#d4d4d8'}}>
+      <View
+        style={{
+          flex: 1,
+          padding: 20,
+          marginTop: 10,
+          backgroundColor: '#d4d4d8',
+        }}>
         <View
           style={{
             flex: 1,
@@ -73,10 +75,10 @@ const Main = () => {
             alignItems: 'center',
           }}>
           <Text style={{color: 'white', fontSize: 30, fontWeight: '400'}}>
-            Most Popular
+            Featured
           </Text>
           {/* onPress={() => navigation.navigate('Lists')} */}
-          <TouchableOpacity >
+          <TouchableOpacity>
             <Text style={{color: '#007AFF', fontSize: 20, fontWeight: '400'}}>
               See all
             </Text>

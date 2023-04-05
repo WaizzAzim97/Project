@@ -14,10 +14,6 @@ const Home = () => {
         <Main />
       ) : selectedTab == 1 ? (
         <Map />
-      ) : selectedTab == 2 ? (
-        <Wishlist />
-      ) : selectedTab == 3 ? (
-        <Reviews />
       ) : (
         <Profile />
       )}
@@ -42,22 +38,6 @@ const Home = () => {
         <TouchableOpacity
           style={styles.bottomTabButtons}
           onPress={() => setSelectedTab(2)}>
-          <Image
-            style={styles.bottomTabIcon}
-            source={require('../images/heart.png')}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.bottomTabButtons}
-          onPress={() => setSelectedTab(3)}>
-          <Image
-            style={styles.bottomTabIcon}
-            source={require('../images/feedback.png')}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.bottomTabButtons}
-          onPress={() => setSelectedTab(4)}>
           <Image
             style={styles.bottomTabIcon}
             source={require('../images/user.png')}

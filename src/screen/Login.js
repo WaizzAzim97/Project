@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import CustomTextInput from '../common/CustomTextInput';
 import CustomButton from '../common/CustomButton';
@@ -12,6 +12,13 @@ const Login = () => {
   const [badPassword, setBadPassword] = useState('');
 
   const navigation = useNavigation();
+
+  useEffect(() => {
+    console.log('Login mounted');
+    return () => {
+      console.log('Login unmounted');
+    };
+  }, [])
 
   const validate = () => {
     if (email === '') {

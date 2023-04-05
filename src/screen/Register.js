@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import CustomButton from '../common/CustomButton';
 import CustomTextInput from '../common/CustomTextInput';
@@ -13,9 +13,18 @@ const Register = () => {
   const navigation = useNavigation();
 
   const saveData = async () => {
+
+    console.log('Saving data...');
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Password:', password);
+
     await AsyncStorage.setItem('NAME', name);
     await AsyncStorage.setItem('EMAIL', email);
     await AsyncStorage.setItem('PASSWORD', password);
+    
+  console.log('Data saved.');
+  
     navigation.goBack();
   };
   return (
@@ -38,7 +47,7 @@ const Register = () => {
         onChangeText={setPassword}
       />
       <CustomButton
-        title={'Login'}
+        title={'Create Account'}
         textColor={'#fff'}
         onPress={() => {
           saveData();

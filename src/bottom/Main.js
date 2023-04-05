@@ -38,25 +38,14 @@ const Main = () => {
         Welcome User
       </Text>
 
-      {/* <View style={{marginTop: 20}}>
-        <FlatList
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          data={categoryList}
-          renderItem={({item, index}) => {
-            return (
-              <TouchableOpacity style={styles.categoryList}>
-                <Text style={styles.categoryText}>{item}</Text>
-              </TouchableOpacity>
-            );
-          }}
-        />
-      </View> */}
-
+      {/* Category Container Button */}
       <View style={styles.categoryContainer}>
         {categoryList.map((item, index) => {
           return (
-            <TouchableOpacity key={index} style={styles.categoryBox}>
+            <TouchableOpacity
+              
+              key={index}
+              style={styles.categoryBox}>
               <Text style={styles.categoryText}>{item}</Text>
             </TouchableOpacity>
           );

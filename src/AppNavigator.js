@@ -7,6 +7,7 @@ import Home from './screen/Home';
 import StartScreen from './screen/StartScreen';
 import Login from './screen/Login';
 import Register from './screen/Register';
+import PackageDetails1 from './screen/PackageDetails1';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,7 @@ const AppNavigator = () => {
           component={StartScreen}
         />
         <Stack.Screen name="Home" options={{headerShown: false}} component={Home} />
+        <Stack.Screen name="PackageDetails" options={{headerShown: false}} component={PackageDetails1} />
       </Stack.Navigator>
     </NavigationContainer>
   );

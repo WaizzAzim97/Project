@@ -1,17 +1,19 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, Image, StyleSheet} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const Planbox = ({item}) => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity style={styles.container}>
       <View style={{width: '100%'}}>
-        <Image source={item.image} style={styles.image} />
+        {/* <Image source={item.image} style={styles.image} /> */}
         <Text style={styles.planName}>{item.name}</Text>
         <View style={styles.buttonContainer}>
           <Text style={styles.planPrice}>$ {item.price}</Text>
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('Login');
+              navigation.navigate('PackageDetails');
             }}
             style={styles.addToCartButton}>
             <Text style={{color: '#000'}}>View</Text>

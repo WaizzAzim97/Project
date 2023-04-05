@@ -26,7 +26,7 @@ export const planData = {
       category: 'Recreational',
       data: [
         {
-          name: 'Shoes Bukit Shahbandar',
+          name: 'Bukit Shahbandar',
           price: 'free',
           location: 'male',
           // image: require('./images/shoes1.jpeg'),
@@ -43,6 +43,6 @@ export const planData = {
           // image: require('./images/jacket1.webp'),
         },
       ],
-    }
+    },
   ],
 };

@@ -79,7 +79,7 @@ const Main = () => {
           </Text>
           {/* onPress={() => navigation.navigate('Lists')} */}
           <TouchableOpacity>
-            <Text style={{color: '#007AFF', fontSize: 20, fontWeight: '400'}}>
+            <Text style={{color: '#007AFF', fontSize: 15, fontWeight: '400'}}>
               See all
             </Text>
           </TouchableOpacity>

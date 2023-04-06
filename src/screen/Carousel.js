@@ -1,23 +1,43 @@
 import React from 'react';
-import {View, ScrollView, Text, StyleSheet, Image} from 'react-native';
+import {
+  View,
+  ScrollView,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import {featured} from '../../FeaturedData';
+import {useNavigation} from '@react-navigation/native';
 
-const CarouselItem = ({item}) => {
+const CarouselItem = ({item, onPress}) => {
   return (
-    <View style={styles.itemContainer}>
+    <TouchableOpacity style={styles.itemContainer} onPress={onPress}>
       <Image source={item.image} style={styles.itemImage} />
       <Text style={styles.itemName}>{item.name}</Text>
       <Text style={styles.itemAgency}>{item.agency}</Text>
       <Text style={styles.itemDescription}>{item.description}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
 const Carousel = () => {
+  const navigation = useNavigation();
+
+  const handlePress = layout => {
+    navigation.navigate(layout);
+  };
   return (
     <ScrollView horizontal={true} style={styles.carouselContainer}>
       {featured.featured.map(item => (
-        <CarouselItem item={item} key={item.id} />
+        <CarouselItem
+          item={item}
+          key={item.id}
+          onPress={() => {
+            navigation.navigate('PackageDetails');
+          }}
+          // onPress={() => handlePress(item.layout)}
+        />
       ))}
     </ScrollView>
   );

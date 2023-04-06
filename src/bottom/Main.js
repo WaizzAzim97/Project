@@ -42,10 +42,7 @@ const Main = () => {
       <View style={styles.categoryContainer}>
         {categoryList.map((item, index) => {
           return (
-            <TouchableOpacity
-              
-              key={index}
-              style={styles.categoryBox}>
+            <TouchableOpacity key={index} style={styles.categoryBox}>
               <Text style={styles.categoryText}>{item}</Text>
             </TouchableOpacity>
           );
@@ -88,6 +85,33 @@ const Main = () => {
         vertical
         showsVerticalScrollIndicator={false}
         data={recreationalList}
+        renderItem={({item, index}) => {
+          return <Planbox item={item} />;
+        }}
+      />
+
+      <FlatList
+        vertical
+        showsVerticalScrollIndicator={false}
+        data={transportList}
+        renderItem={({item, index}) => {
+          return <Planbox item={item} />;
+        }}
+      />
+
+      <FlatList
+        vertical
+        showsVerticalScrollIndicator={false}
+        data={historicalList}
+        renderItem={({item, index}) => {
+          return <Planbox item={item} />;
+        }}
+      />
+
+      <FlatList
+        vertical
+        showsVerticalScrollIndicator={false}
+        data={shoppingList}
         renderItem={({item, index}) => {
           return <Planbox item={item} />;
         }}

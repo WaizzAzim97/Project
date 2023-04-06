@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet, ScrollView, FlatList} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-
+import {useNavigation} from '@react-navigation/native';
 import Carousel from '../screen/Carousel';
 import {planData} from '../../PlanData';
 import Planbox from '../common/Planbox';
@@ -12,6 +12,8 @@ const Main = () => {
   const [historicalList, setHistoricalList] = useState([]);
   const [recreationalList, setRecreationalList] = useState([]);
   const [shoppingList, setShoppingList] = useState([]);
+
+  const navigation = useNavigation();
 
   useEffect(() => {
     let categories = [];
@@ -24,8 +26,6 @@ const Main = () => {
     setShoppingList(planData.category[3].data);
     setCategoryList(categories);
   }, []);
-
-  // const filteredData = planData.filter(data => data.category == category);
 
   return (
     <ScrollView style={styles.container}>
@@ -41,14 +41,58 @@ const Main = () => {
       </Text>
 
       {/* Category Container Button */}
-      <View style={styles.categoryContainer}>
+      {/* <View style={styles.categoryContainer}>
         {categoryList.map((item, index) => {
           return (
-            <TouchableOpacity key={index} style={styles.categoryBox}>
+            <TouchableOpacity
+              key={index}
+              style={styles.categoryBox}
+              onPress={() => {
+                navigation.navigate('RecList');
+              }}>
               <Text style={styles.categoryText}>{item}</Text>
             </TouchableOpacity>
           );
         })}
+      </View> */}
+      <View style={styles.categoryContainer}>
+        {/* <FlatList
+        vertical
+        showsVerticalScrollIndicator={false}
+        data={recreationalList}
+        renderItem={({item, index}) => {
+          return <Planbox item={item} />;
+        }}
+      /> */}
+
+        <TouchableOpacity
+          style={styles.categoryBox}
+          onPress={() => {
+            navigation.navigate('RecList');
+          }}>
+          <Text style={styles.categoryText}>Recreational</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.categoryBox}
+          onPress={() => {
+            navigation.navigate('HistList');
+          }}>
+          <Text style={styles.categoryText}>Historical</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.categoryBox}
+          onPress={() => {
+            navigation.navigate('TransportList');
+          }}>
+          <Text style={styles.categoryText}>Transport</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.categoryBox}
+          onPress={() => {
+            navigation.navigate('ShopList');
+          }}>
+          <Text style={styles.categoryText}>Shopping</Text>
+        </TouchableOpacity>
       </View>
 
       {/* Carousel Section */}
@@ -66,6 +110,7 @@ const Main = () => {
 
       {/* Plan List Section    */}
       <Text style={styles.heading}>Plan Your Holiday</Text>
+
       <FlatList
         vertical
         showsVerticalScrollIndicator={false}

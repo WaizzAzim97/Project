@@ -25,7 +25,7 @@ const Planbox = ({item}) => {
             source={require('../images/like.png')}
           />
         </TouchableOpacity> */}
-          <Text>{item.location}</Text>
+          <Text style={styles.planlocation}>{item.location}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -59,6 +59,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
+  },
+  planlocation:{
+    marginLeft: 10,
+    marginBottom: 10
+    
   },
   addToCartButton: {
     borderWidth: 0.5,

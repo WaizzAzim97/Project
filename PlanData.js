@@ -40,7 +40,7 @@ export const planData = {
           name: 'The Mall Gadong',
           price: '',
           location: 'Gadong',
-          image: require('./src/images/royalRegaia.jpg'),
+          image: require('./src/images/themall.jpg'),
         },
       ],
     },

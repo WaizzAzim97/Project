@@ -1,5 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, StyleSheet, ScrollView, FlatList} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  FlatList,
+  Image,
+  ImageBackground,
+} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {useNavigation} from '@react-navigation/native';
 import Carousel from '../screen/Carousel';
@@ -29,16 +37,29 @@ const Main = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <Text
+      <ImageBackground
+        source={require('../images/header_bg.jpg')}
+        resizeMode="cover"
         style={{
-          fontWeight: 'bold',
-          fontSize: 25,
-          marginLeft: 25,
-          marginTop: 30,
-          marginBottom: 5,
+          maxHeight: 250,
+          flex: 1,
+          flexDirection: 'row',
+          paddingLeft: 15,
+          paddingTop: 20,
+          alignItems: 'center',
         }}>
-        Welcome User
-      </Text>
+        <Text
+          style={{
+            fontWeight: 'bold',
+            fontSize: 30,
+            marginLeft: 13,
+            marginTop: 60,
+            color: 'white',
+          }}>
+          Welcome User
+        </Text>
+      </ImageBackground>
+      
 
       {/* Category Container Button */}
       {/* <View style={styles.categoryContainer}>
@@ -70,6 +91,10 @@ const Main = () => {
           onPress={() => {
             navigation.navigate('RecList');
           }}>
+          <Image
+            style={{width: 30, height: 30}}
+            source={require('../images/recreation.png')}
+          />
           <Text style={styles.categoryText}>Recreational</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -77,6 +102,10 @@ const Main = () => {
           onPress={() => {
             navigation.navigate('HistList');
           }}>
+          <Image
+            style={{width: 30, height: 30}}
+            source={require('../images/history.png')}
+          />
           <Text style={styles.categoryText}>Historical</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -84,6 +113,10 @@ const Main = () => {
           onPress={() => {
             navigation.navigate('TransportList');
           }}>
+          <Image
+            style={{width: 30, height: 30}}
+            source={require('../images/car-wash.png')}
+          />
           <Text style={styles.categoryText}>Transport</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -91,14 +124,25 @@ const Main = () => {
           onPress={() => {
             navigation.navigate('ShopList');
           }}>
+          <Image
+            style={{width: 30, height: 30}}
+            source={require('../images/online-shopping.png')}
+          />
           <Text style={styles.categoryText}>Shopping</Text>
         </TouchableOpacity>
       </View>
-
       {/* Carousel Section */}
       <View style={styles.carouselSection}>
-        <Text style={{color: '#000', fontSize: 30, fontWeight: '400'}}>
-          Featured
+        <Text
+          style={{
+            color: '#000',
+            fontSize: 30,
+            fontWeight: '400',
+            paddingLeft: 20,
+            paddingTop: 15,
+            paddingBottom: 5,
+          }}>
+          Popular
         </Text>
         {/* <TouchableOpacity onPress={() => navigation.navigate('Lists')}>
             <Text style={{color: '#007AFF', fontSize: 15, fontWeight: '400'}}>
@@ -107,10 +151,8 @@ const Main = () => {
           </TouchableOpacity> */}
         <Carousel />
       </View>
-
       {/* Plan List Section    */}
       <Text style={styles.heading}>Plan Your Holiday</Text>
-
       <FlatList
         vertical
         showsVerticalScrollIndicator={false}
@@ -119,7 +161,6 @@ const Main = () => {
           return <Planbox item={item} />;
         }}
       />
-
       <FlatList
         vertical
         showsVerticalScrollIndicator={false}
@@ -128,7 +169,6 @@ const Main = () => {
           return <Planbox item={item} />;
         }}
       />
-
       <FlatList
         vertical
         showsVerticalScrollIndicator={false}
@@ -137,7 +177,6 @@ const Main = () => {
           return <Planbox item={item} />;
         }}
       />
-
       <FlatList
         vertical
         showsVerticalScrollIndicator={false}
@@ -170,18 +209,21 @@ const styles = StyleSheet.create({
   },
   heading: {
     marginTop: 20,
+    padding: 20,
     fontSize: 18,
     marginLeft: 20,
     fontWeight: '600',
     color: '#000',
     marginBottom: 10,
+    textAlign: 'center',
   },
   categoryContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginLeft: 10,
     marginRight: 10,
-    marginTop: 20,
+    marginTop: 40,
+    marginBottom: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -189,12 +231,14 @@ const styles = StyleSheet.create({
     width: 150,
     height: 70,
     borderRadius: 10,
-    borderWidth: 1,
+    borderWidth: 0.2,
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
   },
   carouselSection: {
     // style={{
@@ -207,6 +251,11 @@ const styles = StyleSheet.create({
     // }}
 
     flex: 1,
-    padding: 20,
+  },
+  overlay: {
+    flex: 1,
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

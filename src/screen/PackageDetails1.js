@@ -129,7 +129,7 @@ const PackageDetails1 = () => {
       <View style={styles.button}>
         <TouchableOpacity
           style={{
-            backgroundColor: '#25D366',
+            backgroundColor: '#000',
             borderRadius: 30,
             width: '80%',
             height: 60,
@@ -137,7 +137,7 @@ const PackageDetails1 = () => {
             justifyContent: 'center',
           }}
           onPress={handleWhatsAppPress}>
-          <Text style={{color: '#FFFFFF', fontSize: 20}}>Contact Now</Text>
+          <Text style={{color: '#fff', fontSize: 20}}>Contact Now</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

@@ -28,7 +28,7 @@ const Carousel = () => {
     navigation.navigate(layout);
   };
   return (
-    <ScrollView horizontal={true} style={styles.carouselContainer}>
+    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.carouselContainer}>
       {featured.featured.map(item => (
         <CarouselItem
           item={item}
@@ -45,26 +45,22 @@ const Carousel = () => {
 
 const styles = StyleSheet.create({
   carouselContainer: {
-    padding: 10,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    width: '100%',
   },
   itemContainer: {
+    elevation: 5,
     height: 350,
-    backgroundColor: 'white',
-    borderRadius: 20,
+    backgroundColor: '#fff',
     marginHorizontal: 10,
     alignItems: 'center',
     justifyContent: 'center',
   },
   itemImage: {
-    width: 300,
+    width: 355,
     height: 250,
     marginBottom: 10,
     bottom: 20,
     overflow: 'hidden',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
   },
   itemName: {
     fontWeight: 'bold',

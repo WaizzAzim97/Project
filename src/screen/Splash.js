@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 const Splash = () => {
@@ -11,9 +11,52 @@ const Splash = () => {
   }, []);
 
   return (
-    <View>
-      <Text>Splash Screen</Text>
+    <View style={styles.container}>
+      <View style={styles.imageContainer}>
+        <Image
+          source={require('../images/hatchback.png')}
+          style={styles.logo}
+        />
+      </View>
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>App Name</Text>
+        <Text style={styles.subtitle}>
+          Travel hassle-free in Brunei with ease
+        </Text>
+      </View>
     </View>
   );
 };
 export default Splash;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  imageContainer: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  logo: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
+  },
+  textContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    marginTop: 30,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: 'gray',
+    marginTop: 10,
+  },
+});

@@ -8,6 +8,7 @@ const Planbox = ({item}) => {
     <TouchableOpacity style={styles.container}>
       <View style={{width: '100%'}}>
         <Image source={item.image} style={styles.image} />
+
         <Text style={styles.planName}>{item.name}</Text>
         <View style={styles.buttonContainer}>
           <Text style={styles.planPrice}>$ {item.price}</Text>
@@ -25,7 +26,7 @@ const Planbox = ({item}) => {
             source={require('../images/like.png')}
           />
         </TouchableOpacity> */}
-          <Text style={styles.planlocation}>{item.location}</Text>
+        <Text style={styles.planlocation}>{item.location}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -33,7 +34,7 @@ const Planbox = ({item}) => {
 export default Planbox;
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 20,
+    borderRadius: 10,
     elevation: 5,
     width: '95%',
     justifyContent: 'center',
@@ -60,10 +61,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
   },
-  planlocation:{
+  planlocation: {
     marginLeft: 10,
-    marginBottom: 10
-    
+    marginBottom: 10,
   },
   addToCartButton: {
     borderWidth: 0.5,
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 120,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
   },
 });

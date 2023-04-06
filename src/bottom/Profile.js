@@ -59,13 +59,13 @@ const Profile = () => {
           fontSize: 18,
           fontWeight: 'bold',
         }}>
-        Ali
+        User
       </Text>
       <TouchableOpacity
         style={styles.block}
-        // onPress={() => {
-        //   navigation.navigate('Login');
-        // }}
+         onPress={() => {
+           navigation.navigate('Login');
+         }}
       >
         {/* <Image
           source={require('../images/ramen.png')}
@@ -76,7 +76,7 @@ const Profile = () => {
           }}
         /> */}
         <Text>Username</Text>
-        <Text>AliTheExplorer</Text>
+        <Text>--</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.block}
@@ -93,7 +93,7 @@ const Profile = () => {
           }}
         /> */}
         <Text>User Email</Text>
-        <Text> Ali@gmail.com</Text>
+        <Text> --</Text>
       </TouchableOpacity>
     </View>
   );

@@ -25,6 +25,8 @@ const Main = () => {
     setCategoryList(categories);
   }, []);
 
+  // const filteredData = planData.filter(data => data.category == category);
+
   return (
     <ScrollView style={styles.container}>
       <Text
@@ -51,10 +53,10 @@ const Main = () => {
 
       {/* Carousel Section */}
       <View style={styles.carouselSection}>
-          <Text style={{color: '#000', fontSize: 30, fontWeight: '400'}}>
-            Featured
-          </Text>
-          {/* <TouchableOpacity onPress={() => navigation.navigate('Lists')}>
+        <Text style={{color: '#000', fontSize: 30, fontWeight: '400'}}>
+          Featured
+        </Text>
+        {/* <TouchableOpacity onPress={() => navigation.navigate('Lists')}>
             <Text style={{color: '#007AFF', fontSize: 15, fontWeight: '400'}}>
               See all
             </Text>

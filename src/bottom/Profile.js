@@ -41,13 +41,13 @@ const Profile = () => {
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}>
-                    <Image
+                    {/* <Image
                         style={{
                             width: 24,
                             height: 24,
                         }}
                         source={require('../images/settings.png')}
-                    />
+                    /> */}
                 </TouchableOpacity>
             </View>
             <Image

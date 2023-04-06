@@ -33,6 +33,18 @@ const Map = () => {
             title={'Test Marker'}
             description={'This is a description of the marker'}
           />
+          <Marker
+            draggable
+            coordinate={{
+              latitude: 4.9468351,
+              longitude: 114.8390333,
+            }}
+            onDragEnd={
+              (e) => alert(JSON.stringify(e.nativeEvent.coordinate))
+            }
+            title={'Jerudong Park Playground'}
+            description={'This is a description of the marker'}
+          />
         </MapView>
       </View>
     </SafeAreaView>

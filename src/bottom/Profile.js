@@ -55,7 +55,7 @@ const Profile = () => {
                 style={{ width: 80, height: 80, alignSelf: 'center', marginTop: 30 }}
             />
             <Text style={{ alignSelf: 'center', marginTop: 20, fontSize: 18 }}>
-                John
+                Ali
             </Text>
             <TouchableOpacity
                 style={{

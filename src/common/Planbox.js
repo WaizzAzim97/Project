@@ -7,7 +7,7 @@ const Planbox = ({item}) => {
   return (
     <TouchableOpacity style={styles.container}>
       <View style={{width: '100%'}}>
-        {/* <Image source={item.image} style={styles.image} /> */}
+        <Image source={item.image} style={styles.image} />
         <Text style={styles.planName}>{item.name}</Text>
         <View style={styles.buttonContainer}>
           <Text style={styles.planPrice}>$ {item.price}</Text>
@@ -25,6 +25,7 @@ const Planbox = ({item}) => {
             source={require('../images/like.png')}
           />
         </TouchableOpacity> */}
+          <Text>{item.location}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -34,10 +35,10 @@ const styles = StyleSheet.create({
   container: {
     borderRadius: 20,
     elevation: 5,
-    width: '100%',
+    width: '95%',
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 10,
+    marginHorizontal: 10,
     backgroundColor: '#fff',
     marginBottom: 10,
   },
@@ -83,5 +84,11 @@ const styles = StyleSheet.create({
   heartIcon: {
     width: 23,
     height: 22,
+  },
+  image: {
+    width: '100%',
+    height: 120,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
   },
 });

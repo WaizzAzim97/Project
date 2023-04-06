@@ -6,8 +6,8 @@ export const planData = {
         {
           name: 'Dart',
           price: 'charge',
-          location: 'male',
-          // image: require('./images/tshirt1.jpg'),
+          location: 'N/A',
+          image: require('./src/images/Dart.jpg'),
         },
       ],
     },
@@ -17,8 +17,8 @@ export const planData = {
         {
           name: 'Royal Regalia Museum',
           price: 'free',
-          location: 'male',
-          // image: require('./images/jeans1.webp'),
+          location: 'Bandar Seri Begawan',
+          image: require('./src/images/royalRegaia.jpg'),
         },
       ],
     },
@@ -28,8 +28,8 @@ export const planData = {
         {
           name: 'Bukit Shahbandar',
           price: 'free',
-          location: 'male',
-          // image: require('./images/shoes1.jpeg'),
+          location: 'Jerudong',
+          image: require('./src/images/bukitShahBandar.jpg'),
         },
       ],
     },
@@ -37,10 +37,10 @@ export const planData = {
       category: 'Shopping',
       data: [
         {
-          name: 'Huahao Department Store',
+          name: 'The Mall Gadong',
           price: '',
-          location: 'male',
-          // image: require('./images/jacket1.webp'),
+          location: 'Gadong',
+          image: require('./src/images/royalRegaia.jpg'),
         },
       ],
     },

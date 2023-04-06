@@ -50,32 +50,15 @@ const Main = () => {
       </View>
 
       {/* Carousel Section */}
-      <View
-        style={{
-          flex: 1,
-          padding: 20,
-          marginTop: 10,
-          backgroundColor: '#d4d4d8',
-        }}>
-        <View
-          style={{
-            flex: 1,
-            paddingBottom: 10,
-            backgroundColor: '#d4d4d8',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
-          <Text style={{color: 'white', fontSize: 30, fontWeight: '400'}}>
+      <View style={styles.carouselSection}>
+          <Text style={{color: '#000', fontSize: 30, fontWeight: '400'}}>
             Featured
           </Text>
-          {/* onPress={() => navigation.navigate('Lists')} */}
-          <TouchableOpacity>
+          {/* <TouchableOpacity onPress={() => navigation.navigate('Lists')}>
             <Text style={{color: '#007AFF', fontSize: 15, fontWeight: '400'}}>
               See all
             </Text>
-          </TouchableOpacity>
-        </View>
+          </TouchableOpacity> */}
         <Carousel />
       </View>
 
@@ -165,5 +148,18 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 10,
+  },
+  carouselSection: {
+    // style={{
+    //   flex: 1,
+    //   paddingBottom: 10,
+    //   backgroundColor: '#d4d4d8',
+    //   flexDirection: 'row',
+    //   justifyContent: 'space-between',
+    //   alignItems: 'center',
+    // }}
+
+    flex: 1,
+    padding: 20,
   },
 });

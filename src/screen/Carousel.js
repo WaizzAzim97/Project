@@ -46,7 +46,8 @@ const Carousel = () => {
 const styles = StyleSheet.create({
   carouselContainer: {
     padding: 10,
-    borderRadius: 10,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
   },
   itemContainer: {
     height: 350,
@@ -62,6 +63,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     bottom: 20,
     overflow: 'hidden',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
   },
   itemName: {
     fontWeight: 'bold',

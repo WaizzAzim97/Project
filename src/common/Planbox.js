@@ -17,7 +17,7 @@ const Planbox = ({item}) => {
               navigation.navigate('PackageDetails');
             }}
             style={styles.addToCartButton}>
-            <Text style={{color: '#000'}}>View</Text>
+            <Text style={{ fontFamily: 'Montserrat-Bold', fontSize: 14}}>View</Text>
           </TouchableOpacity>
         </View>
         {/* <TouchableOpacity style={styles.heartButtonContainer}>
@@ -47,6 +47,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginLeft: 10,
     fontSize: 18,
+    fontFamily: 'Montserrat-BoldItalic',
+    color: '#221e22'
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -58,12 +60,13 @@ const styles = StyleSheet.create({
     marginTop: 5,
     marginLeft: 10,
     fontSize: 18,
-    fontWeight: 'bold',
     marginBottom: 10,
+    fontFamily: 'Montserrat-Regular',
   },
   planlocation: {
     marginLeft: 10,
     marginBottom: 10,
+    fontFamily: 'Montserrat-LightItalic'
   },
   addToCartButton: {
     borderWidth: 0.5,

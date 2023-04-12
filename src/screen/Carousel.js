@@ -28,7 +28,10 @@ const Carousel = () => {
     navigation.navigate(layout);
   };
   return (
-    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.carouselContainer}>
+    <ScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={styles.carouselContainer}>
       {featured.featured.map(item => (
         <CarouselItem
           item={item}
@@ -63,16 +66,18 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   itemName: {
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-ExtraBoldItalic', 
     fontSize: 16,
     marginBottom: 5,
   },
   itemAgency: {
     fontSize: 13,
+    fontFamily: 'Montserrat-Light',
     textAlign: 'center',
   },
   itemDescription: {
     fontSize: 12,
+    fontFamily: 'Montserrat-Regular',
     textAlign: 'center',
   },
 });

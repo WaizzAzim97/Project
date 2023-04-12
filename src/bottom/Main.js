@@ -50,7 +50,7 @@ const Main = () => {
         }}>
         <Text
           style={{
-            fontWeight: 'bold',
+            fontFamily: 'Montserrat-BlackItalic',
             fontSize: 30,
             marginLeft: 13,
             marginTop: 60,
@@ -59,7 +59,6 @@ const Main = () => {
           Welcome User
         </Text>
       </ImageBackground>
-      
 
       {/* Category Container Button */}
       {/* <View style={styles.categoryContainer}>
@@ -141,6 +140,7 @@ const Main = () => {
             paddingLeft: 20,
             paddingTop: 15,
             paddingBottom: 5,
+            fontFamily: 'Montserrat-Regular',
           }}>
           Popular
         </Text>
@@ -206,6 +206,7 @@ const styles = StyleSheet.create({
   categoryText: {
     color: '#000',
     fontSize: 12,
+    fontFamily: 'Montserrat-MediumItalic'
   },
   heading: {
     marginTop: 20,
@@ -216,6 +217,7 @@ const styles = StyleSheet.create({
     color: '#000',
     marginBottom: 10,
     textAlign: 'center',
+    fontFamily: 'Montserrat-Black'
   },
   categoryContainer: {
     flexDirection: 'row',

@@ -19,7 +19,7 @@ const Splash = () => {
         />
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.title}>App Name</Text>
+        <Text style={styles.title}>BruGO</Text>
         <Text style={styles.subtitle}>
           Travel hassle-free in Brunei with ease
         </Text>
@@ -51,12 +51,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontWeight: 'bold',
     marginTop: 30,
+    fontFamily: 'Montserrat-BlackItalic',
   },
   subtitle: {
     fontSize: 16,
     color: 'gray',
     marginTop: 10,
+    fontFamily: 'Montserrat-Regular',
   },
 });

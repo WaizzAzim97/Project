@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     width: '100%',
     justifyContent: 'center',
-    backgroundColor: '#fffff1',
+    backgroundColor: '#fffcf2',
     zIndex: 1000,
     height: 50,
     flexDirection: 'row',
